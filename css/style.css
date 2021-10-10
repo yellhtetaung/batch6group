@@ -126,9 +126,25 @@ body{
         margin-left: 0%;
     }
 }
-@media screen and (max-width: 985px) {
-    .nav li{
-        margin-right: 10px;
+@media screen and (max-width: 1050px) {
+    .nav{
+        height: 200px;
+    }
+    .nav-left h1{
+        font-size: 80px;
+    }
+    .nav-right ul{
+        margin-left: 20%;
+    }
+    .nav-right a{
+        font-size: 40px;
+    }
+    .nav-right label{
+        font-size: 40px;
+    }
+    .search {
+        width: 400px;
+        height: 65px;
     }
 }
 /*body*/
