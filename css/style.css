@@ -8,6 +8,7 @@
 body{
     margin: 0;
     background-color: #222;
+    overflow-x: hidden;
 }
 /*Nav bar*/
 .nav{
@@ -148,7 +149,7 @@ body{
     .search {
         width: 340px;
         height: 50px;
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 /*body*/
