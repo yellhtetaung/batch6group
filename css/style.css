@@ -284,7 +284,6 @@ body{
 }
 .row-3 p{
     text-align: center;
-    font-size: 17px;
     margin-top: 20px;
 }
 @media screen and (max-width: 1232px) {
