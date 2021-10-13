@@ -128,7 +128,7 @@ body{
     margin-bottom: 30px;
 }
 .body p{
-    line-height: 30px;
+    line-height: 35px;
 }
 .read-more-btn{
     color: #0984e3;
@@ -142,4 +142,9 @@ body{
 }
 .read-more-btn:hover{
     color: #f51d4c;
+}
+@media screen and (max-width: 1050px) {
+    .body p{
+        line-height: 75px;
+    }
 }
