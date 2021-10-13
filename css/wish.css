@@ -47,14 +47,16 @@ body{
 }
 .nav-right{
     width: 75%;
+
+    display: flex;
+    align-items: center;
 }
 .nav ul{
-    margin-left: 40%;
+    margin-left: 50%;
 }
 .nav-right li{
     list-style-type: none;
     display: inline-flex;
-    margin-top: 10px;
     margin-right: 40px;
 }
 .nav-right a{
