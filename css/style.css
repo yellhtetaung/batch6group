@@ -375,14 +375,6 @@ body{
 
     border-radius: 60px;
 }
-.chh-1 img{
-    height: 100px;
-    margin-top: 45%;
-}
-.chh-2 img{
-    height: 200px;
-    margin-top: 30%;
-}
 .row-5 div:hover{
     transform: scale(0.9);
 }
@@ -398,12 +390,5 @@ body{
     }
     .row-5 div:hover{
         transform: scale(1);
-    }
-    .chh-1 img{
-        height: 200px;
-    }
-    .chh-2 img{
-        height: 600px;
-        margin-top: 25%;
     }
 }

@@ -115,8 +115,6 @@ body{
     margin-top: 60px;
 }
 .row-1 div{
-    width: 22.5%;
-    height: 380px;
     float: left;
     margin-top: 2%;
     margin-left: 2%;
@@ -129,13 +127,18 @@ body{
 
     border-radius: 60px;
 }
-.chh-1 img{
+.chh-1{
+    width: 22.5%;
+    height: 380px;
+}
+.chh-2{
+    width: 22.5%;
+    height: 200px;
+}
+.chh-3{
+    width: 22.5%;
     height: 100px;
     margin-top: 45%;
-}
-.chh-2 img{
-    height: 200px;
-    margin-top: 30%;
 }
 .row-1 div:hover{
     transform: scale(0.9);
@@ -145,18 +148,22 @@ body{
         height: 8500px;
     }
     .row-1 div{
-        width: 80%;
-        height: 1000px;
         margin-left: 10%;
         margin-bottom: 40px;
     }
     .row-1 div:hover{
         transform: scale(1);
     }
-    .chh-1 img{
+    .chh-1{
+        width: 80%;
+        height: 1000px;
+    }
+    .chh-3{
+        width: 80%;
         height: 200px;
     }
-    .chh-2 img{
+    .chh-2{
+        width: 80%;
         height: 600px;
         margin-top: 25%;
     }
