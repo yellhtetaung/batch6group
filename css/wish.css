@@ -127,6 +127,9 @@ body{
     text-align: center;
     margin-bottom: 30px;
 }
+.body p{
+    line-height: 30px;
+}
 .read-more-btn{
     color: #0984e3;
     cursor: pointer;
