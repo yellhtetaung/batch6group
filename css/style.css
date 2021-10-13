@@ -121,6 +121,7 @@ body{
     height: 630px;
     align-items: center;
     margin-top: 20px;
+    border: 1px solid white;
 }
 .row-1 div{
     width: 50%;
@@ -134,13 +135,14 @@ body{
 .col-2 h1{
     color: #999;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
 }
 .col-2 p{
     color: #999;
     text-align: justify;
     margin-left: 20px;
+    font-size: 16px;
 }
 .col-2 button{
     font-size: 20px;
