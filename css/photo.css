@@ -111,13 +111,16 @@ body{
 /*body*/
 .row-1{
     width: 100%;
-    height: 900px;
+    height:4450px;
     margin-top: 60px;
+
+    border: 1px solid white;
 }
 .row-1 div{
     float: left;
     margin-top: 2%;
     margin-left: 2%;
+    border: 1px solid white;
 
     transition: all 0.5s;
 }
@@ -167,4 +170,18 @@ body{
         height: 600px;
         margin-top: 25%;
     }
+}
+.footer{
+    width: 100%;
+    height: 40px;
+    background-color: #3f029c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+.footer span{
+    color: #fff;
 }

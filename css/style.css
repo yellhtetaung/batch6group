@@ -392,3 +392,17 @@ body{
         transform: scale(1);
     }
 }
+.footer{
+    width: 100%;
+    height: 40px;
+    background-color: #3f029c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+.footer span{
+    color: #fff;
+}
