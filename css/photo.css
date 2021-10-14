@@ -152,7 +152,7 @@ span.active:nth-child(13) {
     margin-top: 45%;
 }
 .row-1 div:hover{
-    transform: scale(0.9);
+    transform: scale(0.97);
 }
 @media screen and (max-width: 1050px) {
     .row-1{

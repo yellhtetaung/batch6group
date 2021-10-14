@@ -394,7 +394,7 @@ span.active:nth-child(13) {
     border-radius: 60px;
 }
 .row-5 div:hover{
-    transform: scale(0.9);
+    transform: scale(1.03);
 }
 @media screen and (max-width: 1050px) {
     .row-5{
