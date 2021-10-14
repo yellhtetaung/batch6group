@@ -105,6 +105,9 @@ span.active:nth-child(13) {
         height: 200px;
     }
     .nav-left h1{
+        text-align: center;
+    }
+    .nav-left span{
         font-size: 50px;
     }
     .nav-right ul{
