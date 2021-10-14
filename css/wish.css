@@ -128,7 +128,7 @@ span.active:nth-child(13) {
 }
 .body div{
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 20px;
     line-height: 1.4rem;
     border: 4px solid #fff;
 
@@ -156,6 +156,9 @@ span.active:nth-child(13) {
 @media screen and (max-width: 1050px) {
     .body p{
         line-height: 75px;
+    }
+    .body div{
+        border-radius: 50px;
     }
 }
 .footer{
