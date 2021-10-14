@@ -19,12 +19,12 @@ parentContainer.addEventListener('click', event=>{
 let n = 0;
 let isPlaying;
 const musicList = [
-    {title: "Memories", artist: "Maroon 5", track: "../audio/1-01-Memories.mp3"},
-    {title: "In This Moment", artist: "Unknown", track: "../audio/in this moment.m4a"},
-    {title: "You Raise Me Up", artist: "Josh Groban", track: "../audio/youraisemeup.m4a"},
-    {title: "Night Changes", artist: "One Direction", track: "../audio/nightchanges.mp3"},
-    {title: "You Are The Reason", artist: "Calum Scott", track: "../audio/youarethereason.mp3"},
-    {title: "Replay", artist: "Iyaz", track: "../audio/replay.mp3"}
+    {title: "Memories", artist: "Maroon 5", track: "./audio/1-01-Memories.mp3"},
+    {title: "In This Moment", artist: "Unknown", track: "./audio/in this moment.m4a"},
+    {title: "You Raise Me Up", artist: "Josh Groban", track: "./audio/youraisemeup.m4a"},
+    {title: "Night Changes", artist: "One Direction", track: "./audio/nightchanges.mp3"},
+    {title: "You Are The Reason", artist: "Calum Scott", track: "./audio/youarethereason.mp3"},
+    {title: "Replay", artist: "Iyaz", track: "./audio/replay.mp3"}
 ]
 
 /* Note for musicList
