@@ -16,28 +16,116 @@ parentContainer.addEventListener('click', event=>{
 
 })
 // music by sogy
-const audioTag = document.querySelector("audio");
+let n = 0;
+let isPlaying;
+const musicList = [
+    {title: "Memories", artist: "Juice WRLD sssssssssss ssssssssssssss sssssssssssss ssssssssssssss sssssssssss", track: "../audio/1-01-Memories.mp3"},
+    {title: "In This Moment", artist: "Juice WRLD", track: "../audio/in this moment.m4a"},
+    {title: "Robbery", artist: "Juice WRLD", track: "music/Robbery.mkv"}
+]
+
+/* Note for musicList
+{}, {}, {}
+title artist track > all string ("")
+track > music src
+*/
+
+const bl = document.querySelectorAll(".bl");
+const angleLeft = document.querySelector(".fa-angle-left");
+
+const disc1 = document.querySelector(".disc1");
+const disc2 = document.querySelector(".disc2");
+const iTag = document.querySelectorAll("i");
+
+const titCon = document.querySelector(".tit-con");
+const tit = document.querySelector(".tit");
+const art = document.querySelector(".art");
+
 const playBut = document.querySelector(".play");
 const pauseBut = document.querySelector(".pause");
+const nextBut = document.querySelector(".next");
+const prevBut = document.querySelector(".prev");
+const audioTag = document.querySelector("audio");
+
+function changeBut() {
+    if (isPlaying) {
+        playBut.style.visibility = "hidden";
+        pauseBut.style.visibility = "visible";
+
+        playBut.style.transform = "translate(-50%, -50%) rotate(90deg)";
+        pauseBut.style.transform = "translate(-50%, -50%) rotate(0deg)";
+    } else {
+        playBut.style.visibility = "visible";
+        pauseBut.style.visibility = "hidden";
+
+        playBut.style.transform = "translate(-50%, -50%) rotate(0deg)";
+        pauseBut.style.transform = "translate(-50%, -50%) rotate(-90deg)";
+    }
+}
+
+function pauseMarquee() {
+    tit.innerHTML = musicList[n].title;
+    art.innerHTML = musicList[n].artist;
+}
+
+function addMarquee() {
+    const titConWidth = titCon.clientWidth;
+    if (tit.clientWidth > titConWidth) tit.innerHTML = "<marquee scrollamount='4'>" +  musicList[n].title +"</marquee>";
+    if (art.clientWidth > titConWidth) art.innerHTML = "<marquee scrollamount='4'>" +  musicList[n].artist +"</marquee>";
+}
+
+function forAll() {
+    audioTag.src = musicList[n].track;
+    audioTag.play();
+
+    isPlaying = true;
+    changeBut();
+
+    pauseMarquee();
+    addMarquee();
+}
 
 playBut.addEventListener("click", () => {
-    audioTag.play();
-    
-    playBut.style.zIndex = "-1";
-    pauseBut.style.zIndex = "0";
-
-    playBut.style.transform = "translate(-50%, -50%) rotate(90deg)";
-    pauseBut.style.transform = "translate(-50%, -50%) rotate(0deg)";
+    disc1.classList.add("box1");
+    disc2.classList.add("box2");
+    for (let z = 0; z < iTag.length; z++) iTag[z].style.color = "whitesmoke";
+    for (let i = 0; i < bl.length; i++) bl[i].style.display = "block";
+     
+    forAll();
 })
 
 pauseBut.addEventListener("click", () => {
     audioTag.pause();
-   
-    playBut.style.zIndex = "0";
-    pauseBut.style.zIndex = "-1";
+    isPlaying = false;
+    changeBut();
+    pauseMarquee();
+})
 
-    playBut.style.transform = "translate(-50%, -50%) rotate(0deg)";
-    pauseBut.style.transform = "translate(-50%, -50%) rotate(-90deg)";
+function nextSong() {
+    if (n === musicList.length - 1) {
+        n = 0;
+    } else {
+        n++;
+    }
+    forAll();
+}
+
+nextBut.addEventListener("click", nextSong);
+
+prevBut.addEventListener("click", () => {
+    if (n === 0) {
+        n = musicList.length -1;
+    } else {
+        n--;
+    }
+    forAll();
+})
+
+audioTag.addEventListener("ended", nextSong);
+
+angleLeft.addEventListener("click", () => {
+    disc1.classList.toggle("go-left");
+    angleLeft.classList.toggle("rotate");
 })
 // intro
         const intro =document.querySelector('.intro');
