@@ -102,13 +102,13 @@ body{
         font-size: 50px;
     }
     .nav-right ul{
-        margin-left: 20%;
+        margin-left: 10%;
     }
     .nav-right li{
-        margin-right: 20px;
+        margin-right: 25px;
     }
     .nav-right a{
-        font-size: 30px;
+        font-size: 40px;
     }
 }
 /*body*/
@@ -226,5 +226,8 @@ i{
     .disc2{
         width: 70px;
         height: 70px;
+    }
+    i{
+        font-size: 35px;
     }
 }
