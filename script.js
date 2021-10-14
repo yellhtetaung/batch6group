@@ -19,9 +19,12 @@ parentContainer.addEventListener('click', event=>{
 let n = 0;
 let isPlaying;
 const musicList = [
-    {title: "Memories", artist: "Juice WRLD sssssssssss ssssssssssssss sssssssssssss ssssssssssssss sssssssssss", track: "../audio/1-01-Memories.mp3"},
-    {title: "In This Moment", artist: "Juice WRLD", track: "../audio/in this moment.m4a"},
-    {title: "Robbery", artist: "Juice WRLD", track: "music/Robbery.mkv"}
+    {title: "Memories", artist: "Maroon 5", track: "../audio/1-01-Memories.mp3"},
+    {title: "In This Moment", artist: "Unknown", track: "../audio/in this moment.m4a"},
+    {title: "You Raise Me Up", artist: "Josh Groban", track: "../audio/youraisemeup.m4a"},
+    {title: "Night Changes", artist: "One Direction", track: "../audio/nightchanges.mp3"},
+    {title: "You Are The Reason", artist: "Calum Scott", track: "../audio/youarethereason.mp3"},
+    {title: "Replay", artist: "Iyaz", track: "../audio/replay.mp3"}
 ]
 
 /* Note for musicList
@@ -35,7 +38,6 @@ const angleLeft = document.querySelector(".fa-angle-left");
 
 const disc1 = document.querySelector(".disc1");
 const disc2 = document.querySelector(".disc2");
-const iTag = document.querySelectorAll("i");
 
 const titCon = document.querySelector(".tit-con");
 const tit = document.querySelector(".tit");
@@ -88,7 +90,6 @@ function forAll() {
 playBut.addEventListener("click", () => {
     disc1.classList.add("box1");
     disc2.classList.add("box2");
-    for (let z = 0; z < iTag.length; z++) iTag[z].style.color = "whitesmoke";
     for (let i = 0; i < bl.length; i++) bl[i].style.display = "block";
      
     forAll();
