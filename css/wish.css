@@ -318,12 +318,11 @@ i{
     display: none;
 }
 @media screen and (max-width: 1050px) {
-    .disc1{
-        width: 200px;
-        height: 200px;
-    }
     .box1{
         width: 350px;
         height: 180px;
+    }
+    .go-left{
+        transform: translateX(-77%);
     }
 }
