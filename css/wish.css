@@ -165,3 +165,61 @@ body{
 .footer span{
     color: #fff;
 }
+/* music by sogy */
+.disc1{
+    width: 70px;
+    height: 70px;
+
+    background-color: rgb(25, 25, 25);
+    box-shadow: 0 0 3px 0 #555;
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.disc2{
+    width: 40px;
+    height: 40px;
+
+    background-color: whitesmoke;
+    border-radius: 50%;
+
+    position: relative;
+}
+
+i{
+    color: #000;
+    font-size: 20px;
+}
+
+.play, .pause{
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pause{
+    z-index: -1;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+@media screen and (max-width: 1050px) {
+    .disc1{
+        width: 150px;
+        height: 150px;
+    }
+    .disc2{
+        width: 70px;
+        height: 70px;
+    }
+}
