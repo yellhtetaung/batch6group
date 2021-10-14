@@ -13,7 +13,7 @@
         <div class="container">
             <div class="nav">
                 <div class="nav-left">
-                    <h1>We Are <span>Family</span></h1>
+                    <h1 class="intro">We Are Family</h1>
                 </div>
                 <div class="nav-right">
                     <ul>
@@ -89,5 +89,35 @@
                 <span>Copyright &copy; 2021 DLTWDF Batch 6 Family</span>
             </div>
         </div>
+        <script>
+            const intro =document.querySelector('.intro');
+            const introText = intro.textContent;
+            const introArr = introText.split('');
+            intro.textContent = '';
+            console.log(introArr);
+    
+            for (let i = 0; i < introArr.length; i++) {
+              
+              intro.innerHTML += '<span>' + introArr[i] + '</span>'
+                
+            }
+    
+            let char = 0;
+            let timer = setInterval(onRun,50);
+    
+            function onRun(){
+                const span = document.querySelectorAll('span')[char]
+                span.classList.add('active')
+                char++
+                if (char === introArr.length) {
+                    complete();
+                    return;
+                }
+            }
+            function complete(params) {
+                clearInterval(timer)
+                timer = null;
+            }
+        </script>
     </body>
 </html>

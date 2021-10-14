@@ -39,3 +39,32 @@ pauseBut.addEventListener("click", () => {
     playBut.style.transform = "translate(-50%, -50%) rotate(0deg)";
     pauseBut.style.transform = "translate(-50%, -50%) rotate(-90deg)";
 })
+// intro
+        const intro =document.querySelector('.intro');
+        const introText = intro.textContent;
+        const introArr = introText.split('');
+        intro.textContent = '';
+        console.log(introArr);
+
+        for (let i = 0; i < introArr.length; i++) {
+          
+          intro.innerHTML += '<span>' + introArr[i] + '</span>'
+            
+        }
+
+        let char = 0;
+        let timer = setInterval(onRun,50);
+
+        function onRun(){
+            const span = document.querySelectorAll('span')[char]
+            span.classList.add('active')
+            char++
+            if (char === introArr.length) {
+                complete();
+                return;
+            }
+        }
+        function complete(params) {
+            clearInterval(timer)
+            timer = null;
+        }

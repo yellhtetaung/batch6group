@@ -32,17 +32,20 @@ body{
     justify-content: center;
     align-items: center;
 }
-.nav-left h1{
+.nav-left span{
     font-size: 40px;
     color: #000;
     font-family: 'Lobster', cursive;
     text-align: center;
 
 }
-.nav-left h1 span{
-    font-family: 'Lobster';
+span.active:nth-child(8),
+span.active:nth-child(9),
+span.active:nth-child(10),
+span.active:nth-child(11),
+span.active:nth-child(12),
+span.active:nth-child(13) {
     color: #03c6fc;
-    font-size: 40px;
 }
 .nav-left h1:hover{
     cursor: pointer;
