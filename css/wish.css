@@ -266,6 +266,8 @@ i{
     left: 50%;
 
     transform: translate(-50%, -50%);
+
+    transition: transform 0.3s ease-in-out;
 }
 
 /* ani */
@@ -275,7 +277,7 @@ i{
     transform: translate(-50%, -50%) rotate(-90deg);
 }
 
-.play, .pause, .next, .prev{
+.next, .prev{
     transition: all 0.3s ease-in-out;
 }
 
