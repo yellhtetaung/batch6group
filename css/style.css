@@ -138,7 +138,6 @@ span.active:nth-child(13) {
     width: 50%;
     height: 100%;
     float: left;
-    border: 1px solid black;
 }
 .col-1 img{
     width: 96%;
