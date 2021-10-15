@@ -141,7 +141,6 @@ span.active:nth-child(13) {
 .row-1 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 
     border-radius: 20px;
 }
@@ -150,9 +149,18 @@ span.active:nth-child(13) {
     width: 22.5%;
     height: 380px;
 }
+.chh-1 img{
+    object-fit: cover;
+}
 .chh-2{
     width: 22.5%;
     height: 200px;
+}
+.change img{
+    object-fit: fill;
+}
+.chh-2 img{
+    object-fit: cover;
 }
 .chh-3{
     width: 22.5%;
