@@ -211,7 +211,7 @@ span.active:nth-child(15) {
 
         transform: translateY(-80%);
     }
-    .body div .colh-11,.body div .colh-29,.body div .colh-47{
+    .body div .colh-11,.body div .colh-29,.body div .colh-47,.body div .colh-64{
         width: 100%;
     }
 }
