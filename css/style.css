@@ -35,12 +35,18 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+@font-face {
+    font-family: 'LoveString-OVEDo';
+    src: local('LoveString-OVEDo'), url('../fonts/LoveString-OVEDo.ttf');
+}
 .nav-left span{
-    font-size: 40px;
+    font-size: 25px;
     color: #f4f4f4;
-    font-family: 'Lobster', cursive;
+    font-family: 'LoveString-OVEDo';
     text-align: center;
     opacity: 0;
+    letter-spacing: 3px;
 }
 span.active{
     opacity: 1;
@@ -50,7 +56,9 @@ span.active:nth-child(9),
 span.active:nth-child(10),
 span.active:nth-child(11),
 span.active:nth-child(12),
-span.active:nth-child(13) {
+span.active:nth-child(13),
+span.active:nth-child(14),
+span.active:nth-child(15) {
     color: #f51d4c;
 }
 .nav-left h1:hover{
