@@ -33,8 +33,14 @@ title artist track > all string ("")
 track > music src
 */
 
-const bl = document.querySelectorAll(".bl");
-const angleLeft = document.querySelector(".fa-angle-left");
+const fl = document.querySelectorAll(".fl");
+const leftCon = document.querySelector(".left-con");
+const time = document.querySelector(".time");
+const leftClickCon = document.querySelector(".left-click-con");
+
+const realPro = document.querySelector(".real-pro");
+const proShadow = document.querySelector(".pro-shadow");
+const proCurrent = document.querySelector(".pro-current");
 
 const disc1 = document.querySelector(".disc1");
 const disc2 = document.querySelector(".disc2");
@@ -48,6 +54,18 @@ const pauseBut = document.querySelector(".pause");
 const nextBut = document.querySelector(".next");
 const prevBut = document.querySelector(".prev");
 const audioTag = document.querySelector("audio");
+
+realPro.addEventListener("mousemove", (e) => {
+    proShadow.style.width = e.offsetX + "px";
+})
+
+realPro.addEventListener("mouseleave", () => {
+    proShadow.style.width = null;
+})
+
+realPro.addEventListener("click", (e) => {
+    audioTag.currentTime = (e.offsetX * totalTime) / realPro.clientWidth;
+})
 
 function changeBut() {
     if (isPlaying) {
@@ -76,10 +94,8 @@ function addMarquee() {
     if (art.clientWidth > titConWidth) art.innerHTML = "<marquee scrollamount='4'>" +  musicList[n].artist +"</marquee>";
 }
 
-function forAll() {
-    audioTag.src = musicList[n].track;
+function forAll1() {
     audioTag.play();
-
     isPlaying = true;
     changeBut();
 
@@ -87,12 +103,19 @@ function forAll() {
     addMarquee();
 }
 
+function forAll2() {
+    audioTag.src = musicList[n].track;
+    forAll1();
+}
+
 playBut.addEventListener("click", () => {
     disc1.classList.add("box1");
     disc2.classList.add("box2");
-    for (let i = 0; i < bl.length; i++) bl[i].style.display = "block";
-     
-    forAll();
+    for (let i = 0; i < fl.length; i++) fl[i].style.display = "flex";
+    leftCon.classList.add("new-left-con");
+
+    if (finalcurrentTime === 0) forAll2();
+    forAll1();
 })
 
 pauseBut.addEventListener("click", () => {
@@ -108,7 +131,7 @@ function nextSong() {
     } else {
         n++;
     }
-    forAll();
+    forAll2();
 }
 
 nextBut.addEventListener("click", nextSong);
@@ -119,41 +142,37 @@ prevBut.addEventListener("click", () => {
     } else {
         n--;
     }
-    forAll();
+    forAll2();
 })
 
 audioTag.addEventListener("ended", nextSong);
 
-angleLeft.addEventListener("click", () => {
-    disc1.classList.toggle("go-left");
-    angleLeft.classList.toggle("rotate");
+function fixTime(time){
+    const min = Math.floor(time / 60);
+    const sec = time % 60;
+
+    const min0 = min < 10 ? "0" + min.toString() : min;
+    const sec0 = sec < 10 ? "0" + sec.toString() : sec;
+
+    return min0 + ":" + sec0;
+}
+
+let finalTotalTime, totalTime;
+let finalcurrentTime = 0;
+audioTag.addEventListener("loadeddata", () => {
+    totalTime = Math.floor(audioTag.duration);
+    finalTotalTime = fixTime(totalTime);
 })
-// intro
-        const intro =document.querySelector('.intro');
-        const introText = intro.textContent;
-        const introArr = introText.split('');
-        intro.textContent = '';
-        console.log(introArr);
 
-        for (let i = 0; i < introArr.length; i++) {
-          
-          intro.innerHTML += '<span>' + introArr[i] + '</span>'
-            
-        }
+audioTag.addEventListener("timeupdate", () => {
+    const currentTime = Math.floor(audioTag.currentTime);
+    finalcurrentTime = fixTime(currentTime);
 
-        let char = 0;
-        let timer = setInterval(onRun,50);
+    time.innerHTML = finalcurrentTime + " / " + finalTotalTime;
+    proCurrent.style.width = (realPro.clientWidth / totalTime) * currentTime + "px";
+})
 
-        function onRun(){
-            const span = document.querySelectorAll('span')[char]
-            span.classList.add('active')
-            char++
-            if (char === introArr.length) {
-                complete();
-                return;
-            }
-        }
-        function complete(params) {
-            clearInterval(timer)
-            timer = null;
-        }
+leftClickCon.addEventListener("click", () => {
+    disc1.classList.toggle("go-left");
+    leftClickCon.children[0].classList.toggle("rotate");
+})
