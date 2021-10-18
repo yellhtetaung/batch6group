@@ -167,9 +167,9 @@ span.active:nth-child(15) {
 .change img{
     object-fit: fill;
 }
-.chh-2 img{
+/* .chh-2 img{
     object-fit: cover;
-}
+} */
 .chh-3{
     width: 22.5%;
     height: 100px;
