@@ -357,6 +357,7 @@ span.active:nth-child(15) {
     border-radius: 40px;
     font-weight: 600;
     margin: 5%;
+    box-shadow: 2px 5px 10px #f53b60;
 
     float: left;
 }
@@ -475,6 +476,7 @@ span.active:nth-child(15) {
     object-fit: cover;
 
     border-radius: 60px;
+    box-shadow: 2px 2px 8px #000;
 }
 .row-5 div:hover{
     transform: scale(1.03);
